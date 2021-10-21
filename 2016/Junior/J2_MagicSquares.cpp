@@ -1,4 +1,5 @@
-// try with hashmaps
+// can also be done with hashmaps
+// not working on dmoj, works with test cases tho
 
 #include <iostream>
 #include <vector>
@@ -12,34 +13,30 @@ bool checkSquare(vector<vector<int>> sqr)
 
     int rowSum = 0;
     vector<vector<int>> colSqr(4);
-    cout<<"horizontal square"<<endl;
     for(int i = 0; i < 4; i++)
     {
         for(int j = 0; j < 4; j++)
         {
-            cout<<sqr[i][j]<<" ";
             colSqr[j].push_back(sqr[i][j]);
             rowSum += sqr[i][j];
         }
+
         if(rowSum != firstRow)
             return false;
         rowSum = 0;
-        cout<<endl;
     }
 
     int colSum = 0;
-    cout<<"Vertical square"<<endl;
     for(int i = 0; i < 4; i++)
     {
         for(int j = 0; j < 4; j++)
         {
-            cout<<colSqr[i][j]<<" ";
             colSum += colSqr[i][j];
         }
+
         if(colSum != firstCol)
             return false;
         colSum = 0;
-        cout<<endl;
     }
 
     return true;
@@ -50,14 +47,14 @@ int main()
     vector<vector<int>> square;
 
     vector<int> row;
-    int in;
+    int inp;
     for(int i = 0; i < 4; i++)
     {
         row.clear();
         for(int j = 0; j < 4; j++)
         {
-            cin>>in;
-            row.push_back(in);
+            cin>>inp;
+            row.push_back(inp);
         }
         square.push_back(row);
     }

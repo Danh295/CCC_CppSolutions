@@ -37,6 +37,7 @@ int main()
 {
     string in;
     getline(cin, in);
+    
     string out = happy_or_sad(in);
     cout<<out;
 

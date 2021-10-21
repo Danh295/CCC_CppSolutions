@@ -18,6 +18,7 @@ int main()
 {
     char game;
     int wins = 0;
+    
     for(int i = 0; i < 6; i++)
     {
         cin>>game;

@@ -24,7 +24,5 @@ int main()
             cout<<"Special";
     }
 
-
-
     return 0;
 }
