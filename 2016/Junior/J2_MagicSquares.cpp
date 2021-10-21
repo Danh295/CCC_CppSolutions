@@ -1,5 +1,7 @@
 // can also be done with hashmaps
-// not working on dmoj, works with test cases tho
+    // DMOJ submission not working, works with examples though
+    // Test case #1: WA (Presentation Error, check your whitespace)
+    // something to do with how input is being taken?
 
 #include <iostream>
 #include <vector>
