@@ -11,9 +11,7 @@ How many of the parking spaces were occupied both yesterday and today?
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-int countOccupied(int avail, string yday, string tday)
+int countOccupied(int avail, std::string yday, std::string tday)
 {
     // PROCESS
 
@@ -38,16 +36,16 @@ int main()
 {
     // INITILIZATION
     int n;
-    string ystday;
-    string tday;
+    std::string ystday;
+    std::string tday;
 
     // INPUT
-    cin>>n;
-    cin>>ystday;
-    cin>>tday;
+    std::cin>>n;
+    std::cin>>ystday;
+    std::cin>>tday;
 
     // OUTPUT
-    cout<<countOccupied(n, ystday, tday);
+    std::cout<<countOccupied(n, ystday, tday);
 
     return 0;
 }
