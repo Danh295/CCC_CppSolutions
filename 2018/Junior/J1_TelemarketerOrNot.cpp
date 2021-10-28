@@ -18,7 +18,9 @@ using namespace std;
 
 bool checkNum(int *nums)
 {
-    // process
+    // PROCESS
+
+    //nested if conditions determines return value
     if(nums[0] == 8 || nums[0] == 9)
     {
         if(nums[3] == 8 || nums[3] == 9)
@@ -32,16 +34,17 @@ bool checkNum(int *nums)
 
 int main()
 {
-    // init
+    // INITIALIZE
     int nums[4];
 
-    // input
+    // INPUT
+        //for loop to take in 4 digits of the number
     for(int i = 0; i < 4; i++)
     {
         cin>>nums[i];
     }
 
-    // ouptut
+    // OUPUT
     if(checkNum(nums))
         cout<<"ignore";
     else   
