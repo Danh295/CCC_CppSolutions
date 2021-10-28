@@ -15,33 +15,38 @@ using namespace std;
 
 int countOccupied(int avail, string yday, string tday)
 {
-    // process
+    // PROCESS
+
+    //init
     int occupied = 0;
     int i = 0;
-    
+
+    //process
+        //while loop compares parking spots of both days
     while(i < avail)
     {
-        if(yday[i] == 'C' && tday[i] == 'C')
+        if(yday[i] == 'C' && tday[i] == 'C') //condition to update return value
             occupied += 1;
         i++;
     }
 
+    //output
     return occupied;
 }
 
 int main()
 {
-    // init
+    // INITILIZATION
     int n;
     string ystday;
     string tday;
 
-    // input
+    // INPUT
     cin>>n;
     cin>>ystday;
     cin>>tday;
 
-    // output
+    // OUTPUT
     cout<<countOccupied(n, ystday, tday);
 
     return 0;
