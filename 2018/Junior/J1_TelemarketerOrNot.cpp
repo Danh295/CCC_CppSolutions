@@ -14,8 +14,6 @@ Write a program to decide if a telephone number is a telemarketer number or not,
 
 #include <iostream>
 
-using namespace std;
-
 bool checkNum(int *nums)
 {
     // PROCESS
@@ -41,14 +39,14 @@ int main()
         //for loop to take in 4 digits of the number
     for(int i = 0; i < 4; i++)
     {
-        cin>>nums[i];
+        std::cin>>nums[i];
     }
 
     // OUPUT
     if(checkNum(nums))
-        cout<<"ignore";
+        std::cout<<"ignore";
     else   
-        cout<<"answer";
+        std::cout<<"answer";
 
     return 0;
 }
