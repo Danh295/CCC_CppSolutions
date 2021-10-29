@@ -8,6 +8,7 @@ Today, you recorded the same information.
 
 How many of the parking spaces were occupied both yesterday and today?
 */
+
 #include <iostream>
 #include <string>
 
