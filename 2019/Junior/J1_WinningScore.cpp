@@ -12,10 +12,14 @@ the game ended in a tie.
 
 int main()
 {
+    // INITILIZATION
     int aPts = 0;
     int bPts = 0;
     int temp;
 
+    // INPUT
+        // values are updated with each input
+        // loops not necessary since there are so little inputs: this is technically faster, but more tedius to type out
     std::cin>>temp;
     aPts += temp*3;
     temp = 0;
@@ -40,6 +44,8 @@ int main()
     bPts += temp*1;
     temp = 0;
 
+    // MAIN PROCESS
+        // if conditions check for corresponding outputs
     std::cout<<aPts<<", "<<bPts<<std::endl;
     if(aPts > bPts)
         std::cout<<'A';
