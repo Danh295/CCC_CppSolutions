@@ -14,7 +14,7 @@ How many of the parking spaces were occupied both yesterday and today?
 
 int countOccupied(int avail, std::string yday, std::string tday)
 {
-    // PROCESS
+    // MAIN PROCESS
 
     //init
     int occupied = 0;
