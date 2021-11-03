@@ -1,23 +1,21 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main()
 {
     int lines;
-    cin>>lines;
+    std::cin>>lines;
     for(int i = 0; i < lines; i++)
     {
         int n;
         char s;
-        cin>>n;
-        cin>>s;
+        std::cin>>n;
+        std::cin>>s;
         for(int j = 0; j < n; j++)
         {
-            cout<<s;
+            std::cout<<s;
         }
-        cout<<endl;
+        std::cout<<std::endl;
     }
 
     return 0;
