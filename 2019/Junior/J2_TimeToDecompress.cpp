@@ -8,6 +8,7 @@ times on a row on one line.
 
 Give a message that your friend has encoded, decode it.
 */
+
 #include <iostream>
 #include <string>
 
