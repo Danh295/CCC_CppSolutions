@@ -44,8 +44,8 @@ int main()
     bPts += temp*1;
     temp = 0;
 
-    // MAIN PROCESS
-        // if conditions check for corresponding outputs
+    // MAIN PROCESS + OUTPUT
+        // if conditions fulfilled, give corresponding outputs
     std::cout<<aPts<<", "<<bPts<<std::endl;
     if(aPts > bPts)
         std::cout<<'A';
