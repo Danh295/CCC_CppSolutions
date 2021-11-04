@@ -1,4 +1,5 @@
 /*
+PROBLEM DESCRIPTION
 You and your friend have come up with a way to send messages back and
 forth. 
 

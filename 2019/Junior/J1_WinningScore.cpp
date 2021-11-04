@@ -1,5 +1,5 @@
 /*
-PROGRAM DESCRIPTION:
+PROBLEM DESCRIPTION:
 You record all of the scoring activity at a basketball game. Points are scored
 by a 3-point shot, a 2-piont field goal, or a 1-point free throw.
 
