@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int shiftySum(int num, int shifts)
 {
     int sum = num;
@@ -19,10 +17,10 @@ int shiftySum(int num, int shifts)
 int main()
 {
     int n, k;
-    cin>>n;
-    cin>>k;
+    std::cin>>n;
+    std::cin>>k;
 
-    cout<<shiftySum(n, k);
+    std::cout<<shiftySum(n, k);
 
     return 0;
 }
