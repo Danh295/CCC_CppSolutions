@@ -15,7 +15,7 @@ int main()
     std::string wrd;
     char outpt[21];
     std::cin>>k;
-    cin>>wrd;
+    std::cin>>wrd;
 
     for(int i = 0; i < wrd.size(); i++)
     {
