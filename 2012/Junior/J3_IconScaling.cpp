@@ -3,11 +3,8 @@
 
 std::string icon[] = {"*x*", " xx", "* *"};
 
-int main() {
-
-    int k;
-    std::cin>>k;
-
+void scaleIcon(int k)
+{
     for(int i = 0; i < 3; i++){
         for(int reps = 0; reps < k; reps ++){
             for(int j = 0; j < 3; j++){
@@ -18,6 +15,14 @@ int main() {
             std::cout<<std::endl;
         }
     }
+}
+
+int main() {
+
+    int k;
+    std::cin>>k;
+
+    scaleIcon(k);
 
     return 0;
 }
