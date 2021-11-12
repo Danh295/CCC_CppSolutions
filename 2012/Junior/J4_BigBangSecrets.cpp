@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int main()
 {
     char alps[26];
@@ -14,9 +12,9 @@ int main()
     }
 
     int k;
-    string wrd;
+    std::string wrd;
     char outpt[21];
-    cin>>k;
+    std::cin>>k;
     cin>>wrd;
 
     for(int i = 0; i < wrd.size(); i++)
@@ -28,7 +26,7 @@ int main()
             chr = 91-(65-(int(wrd[i])-shift));
         }
         
-        cout<<char(chr);
+        std::cout<<char(chr);
     }
 
     return 0;
