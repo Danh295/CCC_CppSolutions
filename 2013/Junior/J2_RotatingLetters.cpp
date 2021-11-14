@@ -1,11 +1,9 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+std::string letrs = "IOSHZXN";
 
-string letrs = "IOSHZXN";
-
-string useOnSign(string sign)
+std::string useOnSign(std::string sign)
 {
     bool inLetrs;
     for(auto &i: sign)
@@ -27,10 +25,10 @@ string useOnSign(string sign)
 
 int main()
 {
-    string sign;
-    cin>>sign;
+    std::string sign;
+    std::cin>>sign;
 
-    cout<<useOnSign(sign);
+    std::cout<<useOnSign(sign);
 
     return 0;
 }
