@@ -1,6 +1,23 @@
 #include <iostream>
 #include <string>
 
+std::string decode(std::string wrd, int k, char* alphas) 
+{
+    std::string decoded;
+    for(int i = 0; i < wrd.size(); i++)
+    {
+        int shift = 3*(i+1)+k;
+        int chr = int(wrd[i]) - shift;
+        if(int(wrd[i]) - shift < 65)
+        {
+            chr = 91-(65-(int(wrd[i])-shift));
+        }
+        decoded[i] = char(chr);
+    }
+
+    return decoded;
+}
+
 int main()
 {
     char alps[26];
@@ -17,16 +34,10 @@ int main()
     std::cin>>k;
     std::cin>>wrd;
 
-    for(int i = 0; i < wrd.size(); i++)
+    std::string final = decode(wrd, k, alps);
+    for(char &i : final)
     {
-        int shift = 3*(i+1)+k;
-        int chr = int(wrd[i]) - shift;
-        if(int(wrd[i]) - shift < 65)
-        {
-            chr = 91-(65-(int(wrd[i])-shift));
-        }
-        
-        std::cout<<char(chr);
+        std::cout<<i;
     }
 
     return 0;
