@@ -2,10 +2,14 @@
 
 int main()
 {
+    // INITILIZATION
     int limit, s, fine;
+
+    // INPUT
     std::cin>>limit;
     std::cin>>s;
 
+    // CONDITIONAL PROCESSING & OUTPUTS
     if(s <= limit)
         std::cout<<"Congratulations, you are within the speed limit!";
     else
