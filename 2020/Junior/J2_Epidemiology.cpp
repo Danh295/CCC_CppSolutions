@@ -1,27 +1,27 @@
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
     int p;
     int n;
     int r;
-    cin>>p;
-    cin>>n;
-    cin>>r;
+    
+    std::cin>>p;
+    std::cin>>n;
+    std::cin>>r;
 
     int day = 0;
     int total = 0;
+
     while(total < p)
     {
-        cout<<day<<": "<<n<<endl;  
+        std::cout<<day<<": "<<n<<std::endl;  
         n *= r;
         total += n;
         day += 1;
     }
 
-    cout<<day;
+    std::cout<<day;
 
     return 0;
 }
