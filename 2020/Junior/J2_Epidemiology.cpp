@@ -1,15 +1,7 @@
 #include <iostream>
 
-int main()
+int calcDays(int p, int n, int r)
 {
-    int p;
-    int n;
-    int r;
-    
-    std::cin>>p;
-    std::cin>>n;
-    std::cin>>r;
-
     int day = 0;
     int total = 0;
 
@@ -21,7 +13,20 @@ int main()
         day += 1;
     }
 
-    std::cout<<day;
+    return day;
+}
+
+int main()
+{
+    int p;
+    int n;
+    int r;
+
+    std::cin>>p;
+    std::cin>>n;
+    std::cin>>r;
+    
+    std::cout<<calcDays(p,n,r);
 
     return 0;
 }
