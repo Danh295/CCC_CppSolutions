@@ -5,3 +5,4 @@ This repository will contain *my* solutions to the CCC throughout the years
 - Currently underdevelopment (**mostly incomplete**)
 
 **NOTICE: THIS REPO IS VERY MESSY AND CURRENTLY UNDER THE WORKS**
+_Majority of the solutions are only for junior questions since I suck_
