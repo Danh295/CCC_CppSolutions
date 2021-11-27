@@ -7,13 +7,27 @@ using namespace std;
 void decode(vector<int> &instr)
 {
     int sum;
+    string curr, prev;
     for(int i = 0; i < instr.size(); i++)
     {
+        prev = curr;
         sum = instr[i]/10000%10 + instr[i]/1000%10;
-        cout<<sum<<endl;
+
+        if(sum % 2 != 0)
+        {
+            cout<<"left ";
+            curr = "left ";
+        }
+        else if(sum != 0)
+        {
+            cout<<"right ";
+            curr = "right ";
+        }
+        else
+            cout<<prev;
+
+        cout<<instr[i]/100%10<<instr[i]/10%10<<instr[i]%10<<endl;
     }
-
-
 }
 
 int main()
