@@ -2,48 +2,59 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
-void decode(vector<int> &instr)
+// MAIN PROCESS
+void decode(std::vector<int> &instr)
 {
+    // init
     int sum;
-    string curr, prev;
+    std::string curr, prev;
+
+    // process
+    // loop through all given instructions
     for(int i = 0; i < instr.size(); i++)
     {
+        // init iterative variables
         prev = curr;
         sum = instr[i]/10000%10 + instr[i]/1000%10;
 
+        // conditions check for direction of curr instruction
         if(sum % 2 != 0)
         {
-            cout<<"left ";
+            std::cout<<"left ";
             curr = "left ";
         }
         else if(sum != 0)
         {
-            cout<<"right ";
+            std::cout<<"right ";
             curr = "right ";
         }
         else
-            cout<<prev;
+            std::cout<<prev;
 
-        cout<<instr[i]/100%10<<instr[i]/10%10<<instr[i]%10<<endl;
+        // iterative output
+        std::cout<<instr[i]/100%10<<instr[i]/10%10<<instr[i]%10<<std::endl;
     }
 }
 
 int main()
 {
+    // INITIALIZATION
     int inp;
-    vector<int> instr;
+    std::vector<int> instr;
 
-    cin>>inp;
+    // INIT INPUT
+    std::cin>>inp;
     instr.push_back(inp);
+
+    // iterative input
     while(inp != 99999)
     {
-        cin>>inp;
+        std::cin>>inp;
         instr.push_back(inp);
     }
     instr.pop_back();
 
+    // call void function for output
     decode(instr);
 
     return 0;
