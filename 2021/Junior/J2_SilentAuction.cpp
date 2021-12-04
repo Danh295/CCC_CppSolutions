@@ -2,23 +2,21 @@
 #include <string>
 #include <unordered_map>
 
-using namespace std;
-
 int main()
 {
     int n;
-    cin>>n;
+    std::cin>>n;
 
-    string nm;
+    std::string nm;
     int amt;
-    cin>>nm;
-    cin>>amt;
-    string hNm = nm;
+    std::cin>>nm;
+    std::cin>>amt;
+    std::string hNm = nm;
     int hAmt = amt;
     for(int i = 1; i < n; i++)
     {
-        cin>>nm;
-        cin>>amt;
+        std::cin>>nm;
+        std::cin>>amt;
         if(amt > hAmt)
         {
             hNm = nm;
@@ -26,7 +24,7 @@ int main()
         }
     }
 
-    cout<<hNm;
+    std::cout<<hNm;
 
     return 0;
 }
