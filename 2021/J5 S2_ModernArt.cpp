@@ -2,59 +2,43 @@
 
 using namespace std;
 
-// brute force approach, it gets the right answer, but TLE on batch #6
 int main()
 {
     ios::sync_with_stdio(0);
-    cin.tie(NULL);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-    int r, c, k;
+    long long r, c, k, counter;
     cin>>r>>c>>k;
 
-    int arr[r][c];
-    for(int i = 0; i < r; i++)
-        for(int j = 0; j < c; j++)
-            arr[i][j] = 0;
+    int row[r], col[c];
+    for(long long i = 0; i < r; i++)
+        row[i] = 0;
+    for(long long i = 0; i < c; i++)
+        col[i] = 0;
 
     for(int i = 0; i < k; i++)
     {
         char choice;
-        int n;
-
+        long unsigned int n;
+        
         cin>>choice>>n;
-        n = n - 1;
 
-        if(choice == 'R')
-        {
-            for(int j = 0; j < c; j++)
-            {
-                if(!arr[n][j])
-                    arr[n][j] = 1;
-                else
-                    arr[n][j] = 0;
-            }
-        }
-        else
-        {
-            for(int j = 0; j < r; j++)
-            {
-                if(!arr[j][n])
-                    arr[j][n] = 1;
-                else
-                    arr[j][n] = 0;
-            }
-        }
+        if(choice == 'R' && sizeof(row) / sizeof(row[0]) >= n)
+            row[n - 1] += 1;
+        else if(sizeof(col) / sizeof(col[0]) >= n)
+            col[n - 1] += 1;
     }
 
-    int sum = 0;
+    counter = 0;
     for(int i = 0; i < r; i++)
     {
         for(int j = 0; j < c; j++)
         {
-            if(arr[i][j])
-                sum += 1;
+            if((row[i] + col[j]) % 2 == 1)
+                counter += 1;
         }
     }
 
-    cout << sum;   
+    cout<<counter;
 }
