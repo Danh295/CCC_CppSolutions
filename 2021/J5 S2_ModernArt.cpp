@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0);
+    cin.tie(NULL);
 
     int r, c, k;
     cin>>r>>c>>k;
