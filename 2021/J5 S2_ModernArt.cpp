@@ -1,15 +1,13 @@
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-    ios::sync_with_stdio(0);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
 
     long long r, c, k, counter;
-    cin>>r>>c>>k;
+    std::cin>>r>>c>>k;
 
     int row[r], col[c];
     for(long long i = 0; i < r; i++)
@@ -40,5 +38,5 @@ int main()
         }
     }
 
-    cout<<counter;
+    std::cout<<counter;
 }
