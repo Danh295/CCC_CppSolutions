@@ -20,7 +20,7 @@ int main()
         char choice;
         long unsigned int n;
         
-        cin>>choice>>n;
+        std::cin>>choice>>n;
 
         if(choice == 'R' && sizeof(row) / sizeof(row[0]) >= n)
             row[n - 1] += 1;
