@@ -39,6 +39,11 @@ void decode(std::vector<int> &instr)
 int main()
 {
     // INITIALIZATION
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+
     int inp;
     std::vector<int> instr;
 
