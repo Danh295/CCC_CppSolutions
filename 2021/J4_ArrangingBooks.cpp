@@ -1,3 +1,5 @@
+// NOT FULLY IMPLEMENTED
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -6,13 +8,25 @@ using namespace std;
 
 int main()
 {
+    // INITIALIZATION
+
+    // fast i/o
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
     int swaps = 0;
     string shelf;
-    cin>>shelf;
 
     int lNum = 0;
     int mNum = 0;
     int sNum = 0;
+
+    // INPUT
+
+    cin>>shelf;
+
+    // PROCESS
 
     for(int i = 0; i < shelf.size(); i++)
     {
