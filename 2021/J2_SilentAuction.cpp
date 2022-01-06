@@ -4,19 +4,32 @@
 
 int main()
 {
-    int n;
-    std::cin>>n;
+    // INITIALIZATION
+    
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
 
-    std::string nm;
-    int amt;
+    int n, amt, hAmt;
+    std::string nm, hNm;
+
+    // INPUT
+    std::cin>>n;
     std::cin>>nm;
     std::cin>>amt;
-    std::string hNm = nm;
-    int hAmt = amt;
+
+    // PROCESS
+    hNm = nm;
+    hAmt = amt;
+
+    // iterative input processing
     for(int i = 1; i < n; i++)
     {
         std::cin>>nm;
         std::cin>>amt;
+
+        // condition for value update
         if(amt > hAmt)
         {
             hNm = nm;
@@ -24,6 +37,7 @@ int main()
         }
     }
 
+    // OUTPUT
     std::cout<<hNm;
 
     return 0;
