@@ -14,9 +14,7 @@ void scaleIcon(int k)
             for(int j = 0; j < 3; j++)
             {
                 for(int r = 0; r < k; r++)
-                {
                     std::cout<<icon[i][j];
-                }
             }
             std::cout<<std::endl;
         }
@@ -26,6 +24,12 @@ void scaleIcon(int k)
 int main() 
 {
     // INITILIZATION
+
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    
     int k;
 
     // INPUT
