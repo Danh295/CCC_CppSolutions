@@ -3,8 +3,17 @@
 
 int main()
 {
+    // INITIALIZATION
+
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+
     char alps[26];
     int j = 65;
+
+    // set up alphabet char aray
     for(int i = 0; i < 26; i++)
     {
         alps[i] = j;
@@ -14,9 +23,12 @@ int main()
     int k;
     std::string wrd;
     char outpt[21];
+
+    // INPUT
     std::cin>>k;
     std::cin>>wrd;
 
+    // PROCESS & ITERATIVE OUTPUT
     for(int i = 0; i < wrd.size(); i++)
     {
         int shift = 3*(i+1)+k;
