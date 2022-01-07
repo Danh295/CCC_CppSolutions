@@ -3,6 +3,12 @@
 int main()
 {
     // INITILIZATION
+
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    
     int a, b, c, d;
 
     // INPUT
