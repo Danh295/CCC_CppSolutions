@@ -1,6 +1,5 @@
 #include <iostream>
-#include <string>
-#include <unordered_map>
+#include <map>
 
 using namespace std;
 
@@ -11,33 +10,29 @@ int main()
     cout.tie(nullptr);
 
     int n;
-    string names[2][30];
-    unordered_map<string, string> partners;
+    string names1[31];
+    string names2[31];
+    map<string, string> pairs;
+    bool good = true;
 
     cin>>n;
     
-    for(int i = 0; i < 2; i++)
-    {
-        for(int j = 0; j < n; j++)
-            cin>>names[i][j];
-    }
+    for(int i = 0; i < n; i++)
+        cin>>names1[i];
+    for(int i = 0; i < n; i++)
+        cin>>names2[i];
+    
+    for(int i = 0; i < n; i++)
+        pairs[names1[i]] == names2[i];
 
     for(int i = 0; i < n; i++)
     {
-        if(names[0][i] != names[1][i])
-            partners[names[0][i]] = names[1][i];
-    }
-
-    bool good = true;
-    for(auto i: partners)
-    {
-        if(i.first == i.second)
+        if(pairs[names1[i]] == names1[i])
             good = false;
-        else if(partners[i.second] != i.first)
-            good = false;
+        if(pairs[names1[i]] == names2[i] && pairs[names2[i]] == names1[i])
+            continue;
         
-        if(!good)
-            break;
+        good = false;
     }
 
     if(good)
