@@ -25,4 +25,6 @@ int main()
     //     cout<<2;
     // else
     //     cout<<3;
+
+    return 0;
 }
