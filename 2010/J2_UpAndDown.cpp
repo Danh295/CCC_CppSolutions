@@ -78,5 +78,33 @@ int main()
     else  
         cout<<"Tied";
 
+    // Better Solution: Mathematical approach; no need for iteration
+    // credit to "codingdaddy" on DMOJ
+    // int Nsteps = 0;
+    // int Bsteps = 0;
+
+    // int Nsets = s/(a+b);
+    // int Bsets = s/(c+d);
+
+    // int NRemaining = s%(a+b);
+    // int BRemaining = s%(c+d);
+
+    // if(NRemaining <= a)
+    //     Nsteps = Nsets * (a-b) + NRemaining;
+    // else
+    //     Nsteps = Nsets * (a-b) + a-(NRemaining-a);
+
+    // if(BRemaining <= c)
+    //     Bsteps = Bsets * (c-d) + BRemaining;
+    // else 
+    //     Bsteps = Bsets * (c-d) + c-(BRemaining - c);
+
+    // if(Bsteps > Nsteps)
+    //     cout<<"Byron";
+    // else if(Bsteps < Nsteps)
+    //     cout<<"Nikky";
+    // else 
+    //     cout<<"Tied";
+
     return 0;
 }
