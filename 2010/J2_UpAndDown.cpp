@@ -4,22 +4,30 @@ using namespace std;
 
 int main()
 {
+    // INITIALIZATION
+    
+    // fast i/o
     ios::sync_with_stdio(0);
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    int a, b, c, d, s, countN, countB, totalN, totalB, ca, cb, cc, cd;
+    int a, b, c, d, s;
+    int countN = 0;
+    int countB = 0;
+    int totalN = 0;
+    int totalB = 0;
+    int ca = 0;
+    int cb = 0;
+    int cc = 0;
+    int cd = 0;
+
+    // INPUT
     cin>>a>>b>>c>>d>>s;
 
-    countN = 0;
-    countB = 0;
-    totalN = 0;
-    totalB = 0;
-    ca = 0;
-    cb = 0;
-    cc = 0;
-    cd = 0;
+    
+    // PROCESS
 
+    // conditional iterative increments
     while(countN < s)
     {
         if(cb == b)
@@ -62,6 +70,7 @@ int main()
         countB += 1;
     }
 
+    // CONDITIONAL OUTPUTS
     if(totalN > totalB)
         cout<<"Nikky";
     else if(totalB > totalN)
