@@ -2,7 +2,7 @@
 
 int main()
 {
-    /// INITIALIZATION
+    // INITIALIZATION
 
     // fast i/o
     std::ios::sync_with_stdio(0);
