@@ -1,14 +1,12 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
     // INITIALIZATION
     // fast i/o
-    ios::sync_with_stdio(0);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
 
     int numPlayers;
     int count = 0;
@@ -16,11 +14,11 @@ int main() {
     bool star = true;
     
     // INPUT
-    cin>>numPlayers;
+    std::cin>>numPlayers;
 
     // PROCESS
     for (int i = 0; i < numPlayers; i++) {
-        cin>>pts>>fouls;
+        std::cin>>pts>>fouls;
         if ((pts*5) - (fouls*3) > 40) {
             count += 1;
         } else {
@@ -29,6 +27,6 @@ int main() {
     }
 
     // OUTPUT
-    cout<<count;
-    if (star) cout<<"+";
+    std::cout<<count;
+    if (star) std::cout<<"+";
 }
