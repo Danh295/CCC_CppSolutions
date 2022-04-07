@@ -1,27 +1,24 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-
 int main() {
 
     // INITILIZATION
-    const string strings = "ABCDEFGHIJKLMNOPQRST";
-    const string ints = "1234567890";
+    const std::string strings = "ABCDEFGHIJKLMNOPQRST";
+    const std::string ints = "1234567890";
 
-    vector<char> target;
-    string inst;
-    string ins;
-    string amt;
+    std::vector<char> target;
+    std::string inst;
+    std::string ins;
+    std::string amt;
 
     // INPUT
-    cin>>inst;
+    std::cin>>inst;
 
     // PROCESS & OUTPUT
     for (int i = 0; i < inst.size(); i++) {
 
-        if (strings.find(inst[i]) != string::npos) {
+        if (strings.find(inst[i]) != std::string::npos) {
             target.push_back(inst[i]);
             continue;
         }
@@ -34,9 +31,9 @@ int main() {
             continue;
         }
 
-        if (ints.find(inst[i]) != string::npos) {
+        if (ints.find(inst[i]) != std::string::npos) {
             int j = i;
-            while (ints.find(inst[j]) != string::npos) {
+            while (ints.find(inst[j]) != std::string::npos) {
                 amt.push_back(inst[j]);
                 j++;
             }
@@ -44,9 +41,9 @@ int main() {
         }
 
         for (auto i : target) {
-            cout<<i;
+            std::cout<<i;
         }
-        cout<<" "<<ins<<" "<<amt<<"\n";
+        std::cout<<" "<<ins<<" "<<amt<<"\n";
         target.clear();
         amt.clear();
     }
