@@ -3,24 +3,29 @@
 
 using namespace std;
 
+
 int main() {
 
-    string inst;
-    cin>>inst;
-    
-    string strings = "ABCDEFGHIJKLMNOPQRST";
-    string ints = "1234567890";
+    // INITILIZATION
+    const string strings = "ABCDEFGHIJKLMNOPQRST";
+    const string ints = "1234567890";
 
     vector<char> target;
+    string inst;
     string ins;
     string amt;
 
+    // INPUT
+    cin>>inst;
+
+    // PROCESS & OUTPUT
     for (int i = 0; i < inst.size(); i++) {
+
         if (strings.find(inst[i]) != string::npos) {
             target.push_back(inst[i]);
-
             continue;
         }
+
         if (inst[i] == '+') {
             ins = "tighten";
             continue;
@@ -28,6 +33,7 @@ int main() {
             ins = "loosen";
             continue;
         }
+
         if (ints.find(inst[i]) != string::npos) {
             int j = i;
             while (ints.find(inst[j]) != string::npos) {
