@@ -1,4 +1,4 @@
-// NOT FULLY IMPLEMENTED doesnt work rn
+// NOT FULLY IMPLEMENTED tle rn
 #include <iostream>
 #include <string>
 
