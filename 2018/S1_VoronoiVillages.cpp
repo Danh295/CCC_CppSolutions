@@ -16,7 +16,7 @@ int main() {
 
     cin >> n;
     int v[n];
-    double sizes[n-1];
+    double midPts[n-1];
 
     for (int i = 0; i < n; i++) { 
         cin >> pos;
@@ -25,11 +25,11 @@ int main() {
 
     // PROCESS
     sort(v, v + n);
-    for (int i = 0; i < n - 1; i++) sizes[i] = (v[i] + v[i + 1]) / 2.0; // get midpoints between the villages
+    for (int i = 0; i < n - 1; i++) midPts[i] = (v[i] + v[i + 1]) / 2.0; // get midpoints between the villages
 
-    ans = sizes[1] - sizes[0];
+    ans = midPts[1] - midPts[0];
     for (int i = 1; i < n - 2; i++) { // calculate & determine the smallest village using the midpoints
-        size = sizes[i+1] - sizes[i];
+        size = midPts[i+1] - midPts[i];
         if (size < ans) ans = size;
     }
 
