@@ -7,19 +7,23 @@ int main() {
     cin.tie(0);
     cout.tie(0);
 
-    char temp1, temp2;
-    vector<char> pst;
+    while (true) {
+        string str, op1, op2;
+        getline(cin, str);
 
-    string expr;
-    getline(cin, expr);
+        stack<string> stk;
 
-    for (char c : expr) {
-        if (!isdigit(c)) pst.push_back(c);
-        else {
-            temp1 = pst.back();
-            pst.pop_back();
-            temp2 = pst.back();
-            pst.pop_back();
+        for (int i = str.size() - 1; i >= 0; i--) {
+            if (str[i] == '+' || str[i] == '-') {
+                op1 = stk.top();
+                stk.pop();
+                op2 = stk.top();
+                stk.pop();
+                stk.push(op1 + " " + op2 + " " + str[i]);
+            } else {
+                stk.push(str.substr(i, 1));
+            }
+            cout << stk.top() << "\n";
         }
     }
 }
