@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 int numObs;
-unordered_map<int, int> mp;
-vector<int> order;
+std::unordered_map<int, int> mp;
+std::vector<int> order;
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
 
     int time, pos, t1, t2, i;
     double topSpd = 0, spd;
@@ -19,7 +17,7 @@ int main() {
         mp[time] = pos;
     }
 
-    sort(order.begin(), order.end());
+    std::sort(order.begin(), order.end());
 
     for (i = 0; i < order.size()-1; i++) {
         t1 = order[i];
@@ -29,5 +27,5 @@ int main() {
         if (spd > topSpd) topSpd = spd;
     }
 
-    cout << fixed << setprecision(1) << topSpd;
+    std::cout << std::fixed << std::setprecision(1) << topSpd;
 }
