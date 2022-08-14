@@ -11,8 +11,8 @@ int main() {
     int time, pos, t1, t2, i;
     double topSpd = 0, spd;
 
-    for (cin >> numObs; numObs > 0; numObs--) {
-        cin >> time >> pos;
+    for (std::cin >> numObs; numObs > 0; numObs--) {
+        std::cin >> time >> pos;
         order.push_back(time);
         mp[time] = pos;
     }
