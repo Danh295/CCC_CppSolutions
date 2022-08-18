@@ -1,13 +1,23 @@
 // NOT FULLY IMPLEMENTED
 
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main()
-{
+class Section {
+    public:
+        int l = 0;
+        int m = 0;
+        int s = 0;
+
+        void add(char book) {
+            if (book == 'L') l += 1;
+            else if (book == 'M') m += 1;
+            else s += 1;
+        }
+};
+
+int main() {
     // INITIALIZATION
 
     // fast i/o
@@ -15,41 +25,31 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    int swaps = 0;
+    int i, j = 0;
     string shelf;
 
-    int lNum = 0;
-    int mNum = 0;
-    int sNum = 0;
-
     // INPUT
-
-    cin>>shelf;
+    cin >> shelf;
 
     // PROCESS
+    Section total, l, m, s;
 
-    for(int i = 0; i < shelf.size(); i++)
-    {
-        if(shelf[i] == 'L')
-            lNum += 1;
-        else if(shelf[i] == 'M')
-            mNum += 1;
-        else 
-            sNum += 1;
+    for (i = 0; i < shelf.size(); i++) total.add(shelf[i]); // count number of each letter
+
+    // count number of each letter in each section
+    for (i = 0; i < total.l; i++) {
+        l.add(shelf[j]);
+        j += 1;
+    }
+    for (i = 0; i < total.m; i++) {
+        m.add(shelf[j]);
+        j += 1;
+    }
+    for (i = 0; i < total.s; i++) {
+        s.add(shelf[j]);
+        j += 1;
     }
 
-    // implement sliding window algorithm?
-    // initial loop:
-    int m_in_l = 0;
-    int s_in_l = 0;
-    for(int i = 0; i < lNum; i++)
-    {
-        if(shelf[i] == 'M')
-            m_in_l += 1;
-        else
-            s_in_l += 1;
-    }
-
-    
-    return 0;
+    // number of min swaps = (# of non 'L's in section L) + (# of non 'M's in section M) + min('L's in section M, 'M's in section L)
+    cout << (l.m + l.s + m.l + m.s - min(m.l, l.m)); 
 }
