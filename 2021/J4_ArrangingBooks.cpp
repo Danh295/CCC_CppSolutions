@@ -1,5 +1,3 @@
-// NOT FULLY IMPLEMENTED
-
 #include <bits/stdc++.h>
 
 using namespace std;
