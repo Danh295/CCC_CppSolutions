@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
     // INITIALIZATION
 
     // fast i/o
