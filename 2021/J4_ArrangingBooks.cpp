@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 class Section {
     public:
         int l = 0;
@@ -19,15 +17,15 @@ int main() {
     // INITIALIZATION
 
     // fast i/o
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
 
     int i, j = 0;
-    string shelf;
+    std::string shelf;
 
     // INPUT
-    cin >> shelf;
+    std::cin >> shelf;
 
     // PROCESS
     Section total, l, m, s;
@@ -49,5 +47,5 @@ int main() {
     }
 
     // number of min swaps = (# of non 'L's in section L) + (# of non 'M's in section M) + min('L's in section M, 'M's in section L)
-    cout << (l.m + l.s + m.l + m.s - min(m.l, l.m)); 
+    std::cout << (l.m + l.s + m.l + m.s - std::min(m.l, l.m)); 
 }
