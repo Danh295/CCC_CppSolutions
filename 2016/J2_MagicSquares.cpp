@@ -6,15 +6,13 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-bool checkSquare(vector<vector<int>> sqr)
+bool checkSquare(std::vector<std::vector<int>> sqr)
 {
     int firstRow = sqr[0][0] + sqr[0][1] + sqr[0][2] + sqr[0][3];
     int firstCol = sqr[0][0] + sqr[1][0] + sqr[2][0] + sqr[3][0];
 
     int rowSum = 0;
-    vector<vector<int>> colSqr(4);
+    std::vector<std::vector<int>> colSqr(4);
     for(int i = 0; i < 4; i++)
     {
         for(int j = 0; j < 4; j++)
@@ -46,25 +44,25 @@ bool checkSquare(vector<vector<int>> sqr)
 
 int main()
 {
-    vector<vector<int>> square;
+    std::vector<std::vector<int>> square;
 
-    vector<int> row;
+    std::vector<int> row;
     int inp;
     for(int i = 0; i < 4; i++)
     {
         row.clear();
         for(int j = 0; j < 4; j++)
         {
-            cin>>inp;
+            std::cin>>inp;
             row.push_back(inp);
         }
         square.push_back(row);
     }
 
     if(checkSquare(square))
-        cout<<"magic";
+        std::cout<<"magic";
     else
-        cout<<"not magic";
+        std::cout<<"not magic";
 
     return 0;
 }

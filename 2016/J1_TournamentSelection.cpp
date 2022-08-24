@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int groupPlayer(int wins)
 {
     if(wins >= 5)
@@ -21,12 +19,12 @@ int main()
     
     for(int i = 0; i < 6; i++)
     {
-        cin>>game;
+        std::cin >> game;
         if(game == 'W')
             wins += 1;
     }
 
-    cout<<groupPlayer(wins);
+    std::cout << groupPlayer(wins);
     
     return 0;
 }

@@ -1,18 +1,16 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
     // INITILIZATION
-    ios::sync_with_stdio(0);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
 
     int reg, small;
 
     // INPUT
-    cin>>reg>>small;
+    std::cin>>reg>>small;
 
     // OUTPUT
-    cout<<(3*small + 8*reg) - 28;
+    std::cout<<(3*small + 8*reg) - 28;
 }
