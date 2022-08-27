@@ -1,12 +1,10 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 int countHappy = 0;
 int countSad = 0;
 
-string happy_or_sad(string sent)
+std::string happy_or_sad(std::string sent)
 {
     for(int i = 0; i < sent.size(); i++)
     {
@@ -35,11 +33,11 @@ string happy_or_sad(string sent)
 
 int main()
 {
-    string in;
-    getline(cin, in);
+    std::string in;
+    std::getline(std::cin, in);
     
-    string out = happy_or_sad(in);
-    cout<<out;
+    std::string out = happy_or_sad(in);
+    std::cout<<out;
 
     return 0;
 }
