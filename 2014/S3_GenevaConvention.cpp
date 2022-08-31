@@ -1,16 +1,14 @@
 #include <bits/stdc++.h>
 
-using namespace std;
-
 int tests, ingr, car[100000];
 
 int main() {
-    for (cin >> tests; tests > 0; tests--) {
+    for (std::cin >> tests; tests > 0; tests--) {
         
-        cin >> ingr;
-        for (int i = 0; i < ingr; i++) cin >> car[i];
+        std::cin >> ingr;
+        for (int i = 0; i < ingr; i++) std::cin >> car[i];
 
-        stack<int> stk;
+        std::stack<int> stk;
         int expectingIngr = 1;
 
         for (int i = ingr - 1; i >= 0; i--) {
@@ -22,7 +20,7 @@ int main() {
             }
         }
 
-        if (expectingIngr > ingr) cout << "Y\n";
-        else cout << "N\n";
+        if (expectingIngr > ingr) std::cout << "Y\n";
+        else std::cout << "N\n";
     }
 }
