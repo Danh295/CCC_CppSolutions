@@ -1,58 +1,57 @@
-// can also be done with hashmaps
-    // DMOJ submission not working, works with examples though
-    // Test case #1: WA (Presentation Error, check your whitespace)
-    // something to do with how input is being taken?
+// IMPORTANT: SUBMISSION FORMAT ON DMOJ REQUIRES OUTPUT TO END IN "\n" (whitespace: newline character)
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
-bool checkSquare(std::vector<std::vector<int>> sqr)
+using namespace std;
+
+int sqr[4][4];
+int main() 
 {
-    int firstRow = sqr[0][0] + sqr[0][1] + sqr[0][2] + sqr[0][3];
-    int firstCol = sqr[0][0] + sqr[1][0] + sqr[2][0] + sqr[3][0];
+    // fast i/o
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    
+    // init
+    int total, sum, i, j;
 
-    int rowSum = 0;
-    std::vector<std::vector<int>> colSqr(4);
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            colSqr[j].push_back(sqr[i][j]);
-            rowSum += sqr[i][j];
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4; j++) {
+            cin >> sqr[i][j];
         }
-
-        if (rowSum != firstRow) return false;
-        rowSum = 0;
     }
 
-    int colSum = 0;
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            colSum += colSqr[i][j];
+    // init total using sum of first row
+    total = 0;
+    for (i = 0; i < 4; i++) total += sqr[0][i];
+
+    // compare total to sum of other rows 
+    for (i = 1; i < 4; i++) {
+        sum = 0;
+        for (j = 0; j < 4; j++) {
+            sum += sqr[i][j];
         }
 
-        if (colSum != firstCol) return false;
-        colSum = 0;
-    }
-
-    return true;
-}
-
-int main()
-{
-    std::vector<std::vector<int>> square;
-
-    std::vector<int> row;
-    int inp;
-    for (int i = 0; i < 4; i++) {
-        row.clear();
-        for(int j = 0; j < 4; j++) {
-            std::cin>>inp;
-            row.push_back(inp);
+        if (sum != total) {
+            cout << "not magic" << "\n";
+            return 0;
         }
-        square.push_back(row);
     }
 
-    if (checkSquare(square)) std::cout<<"magic";
-    else std::cout<<"not magic";
+    // compare total to sum of other columns
+    for (i = 0; i < 4; i++) {
+        sum = 0;
+        for (j = 0; j < 4; j++) {
+            sum += sqr[j][i];
+        }
+
+        if (sum != total) {
+            cout << "not magic" << "\n";
+            return 0;
+        }
+    }
+
+    cout << "magic" << "\n";
 
     return 0;
 }
