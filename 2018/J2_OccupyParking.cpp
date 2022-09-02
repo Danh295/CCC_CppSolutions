@@ -3,39 +3,38 @@
 
 int countOccupied(int avail, std::string yday, std::string tday)
 {
-    // MAIN PROCESS
-
     //init
     int occupied = 0;
     int i = 0;
 
     //process
         //while loop compares parking spots of both days
-    while(i < avail)
-    {
-        if(yday[i] == 'C' && tday[i] == 'C') //condition to update return value
+    while (i < avail) {
+        if (yday[i] == 'C' && tday[i] == 'C') //condition to update return value
             occupied += 1;
         i++;
     }
 
-    //output
     return occupied;
 }
 
 int main()
 {
-    // INITILIZATION
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
+
+    // init
     int n;
     std::string ystday;
     std::string tday;
 
-    // INPUT
-    std::cin>>n;
-    std::cin>>ystday;
-    std::cin>>tday;
+    std::cin >> n;
+    std::cin >> ystday;
+    std::cin >> tday;
 
-    // OUTPUT
-    std::cout<<countOccupied(n, ystday, tday);
+    std::cout << countOccupied(n, ystday, tday);
 
     return 0;
 }

@@ -1,9 +1,14 @@
 #include <iostream>
 #include <vector>
 
-int main() {
+int main() 
+{
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
 
-    // INITILIZATION
+    // init
     const std::string strings = "ABCDEFGHIJKLMNOPQRST";
     const std::string ints = "1234567890";
 
@@ -12,10 +17,9 @@ int main() {
     std::string ins;
     std::string amt;
 
-    // INPUT
     std::cin>>inst;
 
-    // PROCESS & OUTPUT
+
     for (int i = 0; i < inst.size(); i++) {
 
         if (strings.find(inst[i]) != std::string::npos) {
@@ -41,9 +45,10 @@ int main() {
         }
 
         for (auto i : target) {
-            std::cout<<i;
+            std::cout << i;
         }
-        std::cout<<" "<<ins<<" "<<amt<<"\n";
+
+        std::cout << " " << ins << " " << amt << "\n";
         target.clear();
         amt.clear();
     }

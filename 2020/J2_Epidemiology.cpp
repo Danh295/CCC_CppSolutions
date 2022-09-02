@@ -1,15 +1,13 @@
 #include <iostream>
 
-// PROCESS
 int calcDays(int p, int n, int r)
 {
     int day = 0;
     int total = 0;
 
 
-    while(total < p)
-    {
-        std::cout<<day<<": "<<n<<std::endl;  
+    while(total < p) {
+        std::cout << day << ": "<<n<<"\n";  
         n *= r;
         total += n;
         day += 1;
@@ -18,26 +16,23 @@ int calcDays(int p, int n, int r)
     return day;
 }
 
-int main()
+int main() 
 {
-    // INITIALIZATION
-
     // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(nullptr);
     std::cout.tie(nullptr);
 
+    // init
     int p;
     int n;
     int r;
 
-    // INPUT
-    std::cin>>p;
-    std::cin>>n;
-    std::cin>>r;
-    
-    // OUTPUT
-    std::cout<<calcDays(p,n,r);
+    std::cin >> p;
+    std::cin >> n;
+    std::cin >> r;
+
+    std::cout << calcDays(p,n,r);
 
     return 0;
 }

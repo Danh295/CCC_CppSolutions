@@ -2,8 +2,10 @@
 
 std::unordered_map<int, int> mp; // map time to distance at each observation
 std::vector<int> order; // keep the order of each observation
-int main() {
-    // fast io
+
+int main() 
+{
+    // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(0);
     std::cout.tie(0);

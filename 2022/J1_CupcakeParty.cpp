@@ -1,16 +1,15 @@
 #include <iostream>
 
-int main() {
-    // INITILIZATION
+int main() 
+{
+    // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(nullptr);
     std::cout.tie(nullptr);
 
+    // init
     int reg, small;
+    std::cin >> reg >> small;
 
-    // INPUT
-    std::cin>>reg>>small;
-
-    // OUTPUT
-    std::cout<<(3*small + 8*reg) - 28;
+    std::cout << (3*small + 8*reg) - 28;
 }

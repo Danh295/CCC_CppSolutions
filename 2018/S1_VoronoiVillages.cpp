@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
 
-int main() {
-    
-    // INIT & INPUT
-
+int main() 
+{    
     // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(nullptr);
     std::cout.tie(nullptr);
 
+    // init
     int n, pos;
     double size, ans;
 
@@ -21,7 +20,6 @@ int main() {
         v[i] = pos;
     }
 
-    // PROCESS
     std::sort(v, v + n);
     for (int i = 0; i < n - 1; i++) midPts[i] = (v[i] + v[i + 1]) / 2.0; // get midpoints between the villages
 
@@ -31,6 +29,5 @@ int main() {
         if (size < ans) ans = size;
     }
 
-    // OUTPUT
     std::cout << std::fixed << std::setprecision(1) << ans;
 }

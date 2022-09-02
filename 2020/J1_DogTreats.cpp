@@ -2,25 +2,23 @@
 
 int main()
 {
-    // INITIALIZATION
-
     // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(nullptr);
     std::cout.tie(nullptr);
 
+    // init
     int s;
     int m;
     int l;
 
-    // INPUT
-    std::cin>>s;
-    std::cin>>m;
-    std::cin>>l;
+    std::cin >> s;
+    std::cin >> m;
+    std::cin >> l;
 
-    // CONDITIONAL OUTPUT
+    // conditional output
     int score = s + 2*m + 3*l;
-    if(score >= 10)
+    if (score >= 10)
         std::cout<<"happy";
     else
         std::cout<<"sad";

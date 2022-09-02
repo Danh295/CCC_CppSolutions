@@ -1,8 +1,14 @@
 #include <bits/stdc++.h>
 
 int N, K;
-int main() {
+int main() 
+{
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
 
+    // init
     std::cin >> N;
     int count = 0, swft[N], sema[N];
     for (int i = 0; i < N; i++) std::cin >> swft[i];

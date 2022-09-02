@@ -13,29 +13,23 @@ bool checkSquare(std::vector<std::vector<int>> sqr)
 
     int rowSum = 0;
     std::vector<std::vector<int>> colSqr(4);
-    for(int i = 0; i < 4; i++)
-    {
-        for(int j = 0; j < 4; j++)
-        {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
             colSqr[j].push_back(sqr[i][j]);
             rowSum += sqr[i][j];
         }
 
-        if(rowSum != firstRow)
-            return false;
+        if (rowSum != firstRow) return false;
         rowSum = 0;
     }
 
     int colSum = 0;
-    for(int i = 0; i < 4; i++)
-    {
-        for(int j = 0; j < 4; j++)
-        {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
             colSum += colSqr[i][j];
         }
 
-        if(colSum != firstCol)
-            return false;
+        if (colSum != firstCol) return false;
         colSum = 0;
     }
 
@@ -48,21 +42,17 @@ int main()
 
     std::vector<int> row;
     int inp;
-    for(int i = 0; i < 4; i++)
-    {
+    for (int i = 0; i < 4; i++) {
         row.clear();
-        for(int j = 0; j < 4; j++)
-        {
+        for(int j = 0; j < 4; j++) {
             std::cin>>inp;
             row.push_back(inp);
         }
         square.push_back(row);
     }
 
-    if(checkSquare(square))
-        std::cout<<"magic";
-    else
-        std::cout<<"not magic";
+    if (checkSquare(square)) std::cout<<"magic";
+    else std::cout<<"not magic";
 
     return 0;
 }

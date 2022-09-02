@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 
-class Section {
+class Section 
+{
     public:
         int l = 0;
         int m = 0;
@@ -13,21 +14,19 @@ class Section {
         }
 };
 
-int main() {
-    // INITIALIZATION
-
+int main() 
+{
     // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(0);
     std::cout.tie(0);
 
+    // init
     int i, j = 0;
     std::string shelf;
 
-    // INPUT
     std::cin >> shelf;
 
-    // PROCESS
     Section total, l, m, s;
 
     for (i = 0; i < shelf.size(); i++) total.add(shelf[i]); // count number of each letter

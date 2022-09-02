@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 
 int nDrops, x, y;
-int main() {
-    // fast io
+int main() 
+{
+    // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(0);
     std::cout.tie(0);

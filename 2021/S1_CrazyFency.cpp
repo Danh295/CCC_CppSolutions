@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
-int main() {
-
+int main() 
+{
     // fast i/o 
     std::ios::sync_with_stdio(0);
     std::cin.tie(nullptr);

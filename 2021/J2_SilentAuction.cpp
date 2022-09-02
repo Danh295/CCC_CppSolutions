@@ -4,8 +4,6 @@
 
 int main()
 {
-    // INITIALIZATION
-    
     // fast i/o
     std::ios::sync_with_stdio(0);
     std::cin.tie(nullptr);
@@ -14,18 +12,16 @@ int main()
     int n, amt, hAmt;
     std::string nm, hNm;
 
-    // INPUT
-    std::cin>>n;
-    std::cin>>nm;
-    std::cin>>amt;
+    // init
+    std::cin >> n;
+    std::cin >> nm;
+    std::cin >> amt;
 
-    // PROCESS
     hNm = nm;
     hAmt = amt;
 
     // iterative input processing
-    for(int i = 1; i < n; i++)
-    {
+    for(int i = 1; i < n; i++) {
         std::cin>>nm;
         std::cin>>amt;
 
@@ -37,8 +33,7 @@ int main()
         }
     }
 
-    // OUTPUT
-    std::cout<<hNm;
+    std::cout << hNm;
 
     return 0;
 }
