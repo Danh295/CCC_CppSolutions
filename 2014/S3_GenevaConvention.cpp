@@ -2,7 +2,13 @@
 
 int tests, ingr, car[100000];
 
-int main() {
+int main() 
+{
+    // fast i/o
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
+
     for (std::cin >> tests; tests > 0; tests--) {
         
         std::cin >> ingr;
