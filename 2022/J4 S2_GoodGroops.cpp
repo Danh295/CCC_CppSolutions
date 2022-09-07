@@ -46,7 +46,6 @@ int main()
     for (i = 0; i < G; i++) {
         for (j = 0; j < 3; j++) {
             key = grps[i][j];
-            cout << "----- " << key << endl;
 
             if (tgt.empty() && apt.empty()) {
                 cout << ans;
@@ -54,14 +53,11 @@ int main()
             }
 
             if (tgt.find(key) != tgt.end()) {
-                cout << "tgt: " << key << "\tmust contain: " << tgt[key] << endl;
-                cout << grps[i][0] << ", " << grps[i][1] << ", " << grps[i][2] << endl;
                 if (j == 0) {
                     if (grps[i][1] != tgt[key] && grps[i][1] != tgt[key] && grps[i][2] != tgt[key] && grps[i][2] != tgt[key]) {
                         ans += 1;
                         tgt.erase(tgt[key]);
                         tgt.erase(key);
-                        cout << "erased: " << tgt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 1) {
@@ -69,7 +65,6 @@ int main()
                         ans += 1;
                         tgt.erase(tgt[key]);
                         tgt.erase(key);
-                        cout << "erased: " << tgt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 2) {
@@ -77,18 +72,15 @@ int main()
                         ans += 1;
                         tgt.erase(tgt[key]);
                         tgt.erase(key);
-                        cout << "erased: " << tgt[key] << ", " << key << endl;
                     }
                 }
             }
             if (apt.find(key) != apt.end()) {
-                cout << "apt: " << key << "\tmust not contain: " << apt[key] << endl;
                 if (j == 0) {
                     if (grps[i][1] == apt[key] || grps[i][1] == apt[key] || grps[i][2] == apt[key] || grps[i][2] == apt[key]) {
                         ans += 1;
                         apt.erase(apt[key]);
                         apt.erase(key);
-                        cout << "erased: " << apt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 1) {
@@ -96,7 +88,6 @@ int main()
                         ans += 1;
                         apt.erase(apt[key]);
                         apt.erase(key);
-                        cout << "erased: " << apt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 2) {
@@ -104,11 +95,9 @@ int main()
                         ans += 1;
                         apt.erase(apt[key]);
                         apt.erase(key);
-                        cout << "erased: " << apt[key] << ", " << key << endl;
                     }
                 }
             }
-            cout << "violations: " << ans << endl;
         }
     }
 
