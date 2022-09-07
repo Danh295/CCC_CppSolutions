@@ -46,7 +46,7 @@ int main()
     for (i = 0; i < G; i++) {
         for (j = 0; j < 3; j++) {
             key = grps[i][j];
-            cout << "-----" << key << endl;
+            cout << "----- " << key << endl;
 
             if (tgt.empty() && apt.empty()) {
                 cout << ans;
@@ -60,18 +60,24 @@ int main()
                     if (grps[i][1] != tgt[key] && grps[i][1] != tgt[key] && grps[i][2] != tgt[key] && grps[i][2] != tgt[key]) {
                         ans += 1;
                         tgt.erase(tgt[key]);
+                        tgt.erase(key);
+                        cout << "erased: " << tgt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 1) {
                     if (grps[i][0] != tgt[key] && grps[i][0] != tgt[key] && grps[i][2] != tgt[key] && grps[i][2] != tgt[key]) {
                         ans += 1;
                         tgt.erase(tgt[key]);
+                        tgt.erase(key);
+                        cout << "erased: " << tgt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 2) {
                     if (grps[i][0] != tgt[key] && grps[i][0] != tgt[key] && grps[i][1] != tgt[key] && grps[i][1] != tgt[key]) {
                         ans += 1;
                         tgt.erase(tgt[key]);
+                        tgt.erase(key);
+                        cout << "erased: " << tgt[key] << ", " << key << endl;
                     }
                 }
             }
@@ -81,18 +87,24 @@ int main()
                     if (grps[i][1] == apt[key] || grps[i][1] == apt[key] || grps[i][2] == apt[key] || grps[i][2] == apt[key]) {
                         ans += 1;
                         apt.erase(apt[key]);
+                        apt.erase(key);
+                        cout << "erased: " << apt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 1) {
                     if (grps[i][0] == apt[key] || grps[i][0] == apt[key] || grps[i][2] == apt[key] || grps[i][2] == apt[key]) {
                         ans += 1;
                         apt.erase(apt[key]);
+                        apt.erase(key);
+                        cout << "erased: " << apt[key] << ", " << key << endl;
                     }
                 }
                 else if (j == 2) {
                     if (grps[i][0] == apt[key] || grps[i][0] == apt[key] || grps[i][1] == apt[key] || grps[i][1] == apt[key]) {
                         ans += 1;
                         apt.erase(apt[key]);
+                        apt.erase(key);
+                        cout << "erased: " << apt[key] << ", " << key << endl;
                     }
                 }
             }
