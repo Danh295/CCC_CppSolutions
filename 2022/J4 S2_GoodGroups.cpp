@@ -1,60 +1,43 @@
 #include <bits/stdc++.h>
 
-int X, Y, G, ans = 0;
-std::unordered_map<std::string, std::vector<std::string>> tgt;
-std::unordered_map<std::string, std::vector<std::string>> apt;
-int main()
+using namespace std;
+
+const int MM = 1e5+5;
+int nTgt, nApt, nGrps, ans = 0;
+unordered_map<string, int> grps; // hashmap to store name -> group #
+string tgt[MM][2], apt[MM][2];
+int main() 
 {
     // fast i/o
-    std::ios::sync_with_stdio(0);
-    std::cin.tie(0);
-    std::cout.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 
     // init
-    int i, j;
-    std::string n1, n2;
+    cin >> nTgt;
+    for (int i = 0; i < nTgt; i++) cin >> tgt[i][0] >> tgt[i][1]; // names that should be tgt
 
-    std::cin >> X;
-    for (i = 0; i < X; i++) {
-        std::cin >> n1 >> n2;
-        tgt[n1].push_back(n2);
-        tgt[n2].push_back(n1);
+    cin >> nApt;
+    for (int i = 0; i < nApt; i++) cin >> apt[i][0] >> apt[i][1]; // names that should be apart
+
+    cin >> nGrps;
+    string a, b, c;
+    for (int i = 0; i < nGrps; i++) {
+        cin >> a >> b >> c;
+        grps[a] = grps[b] = grps[c] = i; // assign names -> group number
     }
 
-    std::cin >> Y;
-    for (i = 0; i < Y; i++) {
-        std::cin >> n1 >> n2;
-        apt[n1].push_back(n2);
-        apt[n2].push_back(n1);
+    // iterate through conditions & increment violations when found
+    for (int i = 0; i < nTgt; i++) {
+        string a = tgt[i][0], b = tgt[i][1]; // get group number of condition's name
+        if (grps[a] != grps[b]) ans += 1; // check if names aren't in the same group
     }
 
-    std::cin >> G;
-    std::string grp[3];
-    for (i = 0; i < G; i++) {
-        for (j = 0; j < 3; j++) std::cin >> grp[j];
-
-        for (std::string n : grp) { // loop through group
-
-            if (tgt.find(n) != tgt.end()) { // if name is part of constraint 
-                for (std::string key : tgt[n]) { 
-                    if (!(find(begin(grp), end(grp), key) != end(grp))) { // if group does not contain name's group mates
-                        ans += 1;
-                        tgt[key].erase(remove(tgt[key].begin(), tgt[key].end(), n), tgt[key].end()); // remove group mate's constraint to prevent triggering the same constraint twice
-                    }
-                }
-            }
-
-            if (apt.find(n) != apt.end()) { // if name is part of constrant
-                for (std::string key : apt[n]) {
-                    if (find(begin(grp), end(grp), key) != end(grp)) { // if group contains name's group mates
-                        ans += 1;
-                        apt[key].erase(remove(apt[key].begin(), apt[key].end(), n), apt[key].end()); // remove group mate's constraint to prevent triggering the same constraint twice
-                    }
-                }
-            }
-        }
+    for (int i = 0; i < nApt; i++) {
+        string a = apt[i][0], b = apt[i][1]; // get group number of condition's name
+        if (grps[a] == grps[b]) ans += 1; // check if names are in the same group
     }
 
-    std::cout << ans;
+    cout << ans;
     return 0;
 }
