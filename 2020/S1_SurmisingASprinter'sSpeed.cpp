@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-std::unordered_map<int, int> mp; // map time to distance at each observation
+std::unordered_map<int, int> grps; // map time to distance at each observation
 std::vector<int> order; // keep the order of each observation
 
 int main() 
@@ -18,7 +18,7 @@ int main()
     for (std::cin >> numObs; numObs > 0; numObs--) {
         std::cin >> time >> pos;
         order.push_back(time);
-        mp[time] = pos;
+        grps[time] = pos;
     }
 
     // sort order of observations in chronological order
@@ -28,7 +28,7 @@ int main()
     for (i = 0; i < order.size()-1; i++) {
         t1 = order[i];
         t2 = order[i+1];
-        spd = abs((double)(mp[t2] - mp[t1]) / (double)(t2 - t1));
+        spd = abs((double)(grps[t2] - grps[t1]) / (double)(t2 - t1));
 
         if (spd > topSpd) topSpd = spd; // check for top speed
     }
