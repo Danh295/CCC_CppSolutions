@@ -21,7 +21,7 @@ int main()
     std::cin >> nGrps;
     std::string a, b, c;
     for (int i = 0; i < nGrps; i++) {
-        cin >> a >> b >> c;
+        std::cin >> a >> b >> c;
         grps[a] = grps[b] = grps[c] = i; // assign names -> group number
     }
 
