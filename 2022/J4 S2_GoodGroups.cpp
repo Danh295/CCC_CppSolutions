@@ -19,7 +19,7 @@ int main()
     for (int i = 0; i < nApt; i++) std::cin >> apt[i][0] >> apt[i][1]; // names that should be apart
 
     std::cin >> nGrps;
-    std::string a, b, c;
+    std::string a, b, c; // temp vars for input storage
     for (int i = 0; i < nGrps; i++) {
         std::cin >> a >> b >> c;
         grps[a] = grps[b] = grps[c] = i; // assign names -> group number
