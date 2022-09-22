@@ -18,8 +18,8 @@ std::string happy_or_sad(std::string sent)
     }
 
     if (countSad + countHappy == 0) return "none";
-    else if(countSad == countHappy) return "unsure";
-    else if(countSad > countHappy) return "sad";
+    else if (countSad == countHappy) return "unsure";
+    else if (countSad > countHappy) return "sad";
     else return "happy"; 
 }
 

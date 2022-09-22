@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
 int tests, ingr, car[100000];
-
 int main() 
 {
     // fast i/o
